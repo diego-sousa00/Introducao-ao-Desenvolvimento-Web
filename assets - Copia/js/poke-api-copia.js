@@ -11,6 +11,8 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.types = types
     pokemon.type = type
 
+    pokemon.abilities = pokeDetail.abilities.map((ability) => ability.ability.name)
+
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
     return pokemon
